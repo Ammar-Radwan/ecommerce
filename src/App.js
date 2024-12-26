@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -19,16 +19,17 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout isSignedUp={signedUp} cartCount={count}/>}>
+          <Route path='/' element={<Navigate to='/electronics-ecommerce/home' />} />
+          <Route path='/electronics-ecommerce' element={<Layout isSignedUp={signedUp} cartCount={count}/>}>
             <Route index element={<Home />}></Route>
-            <Route path='/electronics-ecommerce/home' element={<Home />}></Route>
-            <Route path='/electronics-ecommerce/about' element={<About />}></Route>
-            <Route path='/electronics-ecommerce/products' element={<Proudcts updateCart={setCount}/>}></Route>
-            <Route path='/electronics-ecommerce/must-sign-up' element={<MustSignUp setSignedUp={setSignedUp}/>}/>
-            <Route path='/electronics-ecommerce/registration' 
+            <Route path='/home' element={<Home />}></Route>
+            <Route path='/about' element={<About />}></Route>
+            <Route path='/products' element={<Proudcts updateCart={setCount}/>}></Route>
+            <Route path='/must-sign-up' element={<MustSignUp setSignedUp={setSignedUp}/>}/>
+            <Route path='/registration' 
             element={<Registration setSignedUp={setSignedUp} />}></Route>
-            <Route path='/electronics-ecommerce/login' element={<Login setSignedIn={setSignedUp}  />}></Route>
-            <Route path='/electronics-ecommerce/cart' element={<Cart />}></Route>
+            <Route path='/login' element={<Login setSignedIn={setSignedUp}  />}></Route>
+            <Route path='/cart' element={<Cart />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
