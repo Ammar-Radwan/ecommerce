@@ -1,5 +1,6 @@
+import React from "react";
 
-function Carousel(props) {
+const Carousel = (props) => {
     return(
         <div id="main-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">

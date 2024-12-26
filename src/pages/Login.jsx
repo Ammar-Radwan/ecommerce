@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import "../css/Registration.css";
+import { MainContext } from '../contexts/MainContext';
 
-const Login = (props) => {
+const Login = () => {
   
+  const { setIsSignedUp } = useContext(MainContext)
+
   const handleSignIn = () => {
-    props.setSignedIn(true);
+    setIsSignedUp(true);
   }
 
   return (

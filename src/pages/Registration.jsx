@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Registration.css'
+import { MainContext } from '../contexts/MainContext';
 
 
-function Registration(props){
+function Registration(){
+
+    const { setIsSignedUp } = useContext(MainContext)
 
     const handleSignUp = () => {
-        props.setSignedUp(true);
+        setIsSignedUp(true);
     }
 
     return(

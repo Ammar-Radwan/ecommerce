@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import Layout from '../components/Layout'
 import ProductCard from "../components/products/ProductCard";
 import Filter from '../components/products/Filter';
 import { productsData } from '../utils/data'
 import '../css/Products.css'
 
-
-const Proudcts = (props) => {
+const Proudcts = () => {
 
     // Filter States
     const [brand, setBrand] = useState('All Brands');
@@ -87,42 +87,51 @@ const Proudcts = (props) => {
         return orderedData;
     }
 
-    
     return (
-        <section className="products bg-light py-5">
-            <div className="heading w-100 bg-light">
-                <div className="container">
-                    <h1 className="">Proudcts</h1>
-                </div>
-            </div>
-            <div className="container">
-                <div className="row gy-4">
-
-                    <div className="col-12">
-                        <Filter setBrand={setBrand} setCategory={setCategory} priceFrom={priceFrom}
-                        priceTo={priceTo} setPriceFrom={setPriceFrom} setPriceTo={setPriceTo} 
-                        setStarsFrom={setStarsFrom} setStarsTo={setStarsTo}
-                        starsFrom={starsFrom} starsTo={starsTo} setTag={setTag} setOrder={setOrder} />
+        <Layout>
+            <section className="products bg-light py-5">
+                <div className="heading w-100 bg-light">
+                    <div className="container">
+                        <h1 className="">Proudcts</h1>
                     </div>
-                    {/* Handling Display Products With Filters */}
-                    {confirmOrder(productsData, order).map((product, i)=>(
-                        (checkIf(product, 'brand', [brand]) &&
-                        checkIf(product, 'categories', [category]) &&
-                        checkIf(product, 'tags', [tag]) &&
-                        checkRange(product, 'stars', [starsFrom, starsTo]) &&
-                        checkRange(product, 'price_usd', [priceFrom, priceTo])) && (
-                            <ProductCard key={i} tagsKey={i} starsKey={i} priceKey={i}
-                             tags={product.tags} 
-                            discount={product.discount} imgUrl={product.img_url} ship={product.ship_to_country}
-                            title={product.name} stars={product.stars}
-                            reviews={product.reviews} price={product.price_usd}
-                            updateCart={props.updateCart}
-                            />
-                        )
-                    ))}
                 </div>
-            </div>
-        </section>
+                <div className="container">
+                    <div className="row gy-4">
+
+                        <div className="col-12">
+                            <Filter setBrand={setBrand} setCategory={setCategory} priceFrom={priceFrom}
+                            priceTo={priceTo} setPriceFrom={setPriceFrom} setPriceTo={setPriceTo} 
+                            setStarsFrom={setStarsFrom} setStarsTo={setStarsTo}
+                            starsFrom={starsFrom} starsTo={starsTo} setTag={setTag} setOrder={setOrder} />
+                        </div>
+                        {/* Handling Display Products With Filters */}
+                        {confirmOrder(productsData, order).map((product, i)=>(
+                            (
+                                checkIf(product, 'brand', [brand]) &&
+                                checkIf(product, 'categories', [category]) &&
+                                checkIf(product, 'tags', [tag]) &&
+                                checkRange(product, 'stars', [starsFrom, starsTo]) &&
+                                checkRange(product, 'price_usd', [priceFrom, priceTo])) && (
+                                    <ProductCard 
+                                    key={product.index} 
+                                    tagsKey={product.index} 
+                                    starsKey={product.index} 
+                                    priceKey={product.index}
+                                    tags={product.tags} 
+                                    discount={product.discount} 
+                                    imgUrl={product.img_url} 
+                                    ship={product.ship_to_country}
+                                    title={product.name} 
+                                    stars={product.stars}
+                                    reviews={product.reviews} 
+                                    price={product.price_usd}
+                                />
+                            )
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </Layout>
     );
 }
 

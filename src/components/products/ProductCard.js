@@ -1,22 +1,23 @@
+import React, { useContext, useState } from 'react';
+import { MainContext } from '../../contexts/MainContext';
 import { Stars, Tags, FinalPrice } from '../SubComponents'
-import { useState } from 'react';
 
- 
+
 function ProductCard(props){
     // Add to Cart State
     const [cartActive, setCartActive] = useState(true);
-
+    const { setCartCount } = useContext(MainContext)
 
     const update = (e) => {
         setCartActive(cartActive => !cartActive);
         console.log(`cart active: ${cartActive}`);
         if(cartActive){
             e.target.classList.add('active');
-            props.updateCart((prevCount)=>prevCount+1)
+            setCartCount((prevCount)=>prevCount+1)
         }
         else{
             e.target.classList.remove('active');
-            props.updateCart((prevCount)=>prevCount-1)
+            setCartCount((prevCount)=>prevCount-1)
         }
     }
 

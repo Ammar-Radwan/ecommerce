@@ -9,13 +9,25 @@ class Sliders extends Component{
         <>
         <Carousel className="main-slide" autoPlay={true} interval={2500} infiniteLoop={true} stopOnHover={false}>
             <div id="root">
-                <img src='/images/homePage/img1.jpg' height="350px" width="300px" alt='slide 1'/>
+                <img
+                  src='../../assets/homePage/img1.jpg' 
+                  height="350px" 
+                  width="300px" 
+                  alt='slide 1'/>
             </div>
             <div id="root">
-                <img src='/images/homePage/img2.jpg' height="350px" width="300px" alt='slide 2'/>
+                <img
+                  src='../../assets/homePage/img2.jpg' 
+                  height="350px" 
+                  width="300px" 
+                  alt='slide 2'/>
             </div>
             <div id="root">
-                <img src='/images/homePage/img3.jpg' height="350px" width="300px" alt='slide 3'/>
+                <img
+                  src='../../assets/homePage/img3.jpg' 
+                  height="350px" 
+                  width="300px" 
+                  alt='slide 3'/>
             </div>
         </Carousel>        
         </>

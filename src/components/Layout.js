@@ -1,7 +1,11 @@
-import { Outlet, Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { MainContext } from "../contexts/MainContext";
+import { Link } from "react-router-dom";
 import '../css/Layout.css'
 
-function Layout(props){
+function Layout({ children }){
+    const { isSignedUp, cartCount } = useContext(MainContext)
+    const ROOT = '/electronics-ecommerce'
 
     const handleLink = (e) => {
         var linksList = document.querySelectorAll('.nav-link');
@@ -16,7 +20,7 @@ function Layout(props){
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <Link className='navbar-brand' 
-                    to='/electronics-ecommerce/products'><h3>BRAND.</h3></Link>
+                    to='${ROOT}/products'><h3>BRAND.</h3></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -24,40 +28,47 @@ function Layout(props){
                     <ul className="navbar-nav ms-auto">
                         <li key='home' className='nav-item'>
                             <Link className='nav-link active main-color-hover' onClick={handleLink}
-                            to='/electronics-ecommerce/home'>Home</Link>
+                            to={`${ROOT}/home`}>Home</Link>
                         </li>
                         <li key='about' className='nav-item'>
                             <Link className='nav-link main-color-hover' onClick={handleLink}
-                            to='/electronics-ecommerce/about'>About</Link>
+                            to={`${ROOT}/about`}>About</Link>
                         </li>
                         <li key='products' className='nav-item'>
                             <Link className='nav-link main-color-hover' onClick={handleLink}
-                            to={props.isSignedUp ? '/electronics-ecommerce/products': '/electronics-ecommerce/must-sign-up'}>
+                            to={isSignedUp ? `${ROOT}/products`: `${ROOT}/must-sign-up`}>
                             Products</Link>
                         </li>
                         <li key='registration' className='nav-item'>
                             <Link className='nav-link main-color-hover' onClick={handleLink}
-                            to='/electronics-ecommerce/registration'>Registration</Link>
+                            to={`${ROOT}/registration`}>Registration</Link>
                         </li>
                         <li key='login' className='nav-item'>
                             <Link className='nav-link main-color-hover' onClick={handleLink}
-                            to='/electronics-ecommerce/login'>Login</Link>
+                            to={`${ROOT}/login`}>Login</Link>
                         </li>
                         <li className='nav-item'>
                             <Link className="nav-link main-color-hover" onClick={handleLink} 
-                            to={props.isSignedUp ? '/electronics-ecommerce/cart': '/electronics-ecommerce/must-sign-up'}>
+                            to={isSignedUp ? `${ROOT}/cart`: `${ROOT}/must-sign-up`}>
                                 <i className="fa-solid fa-cart-shopping"></i>
                                 <span className="link-name">Cart</span>
-                                {props.cartCount > 0 ? 
-                                    <span className="notifications">{props.cartCount}</span>: ''
+                                {cartCount > 0 ? 
+                                    <span className="notifications">{cartCount}</span>: ''
                                 }
                             </Link>
                         </li>
                     </ul>
                     </div>
                 </nav>
+                <main>
+                    { children }
+                </main>
+                <footer>
+                    <div className="footer w-100 mt-5 py-3 text-center">
+                        Copyright (c) 2023 Ammar Radwan, All Rights Reserveds.
+                    </div>
+                </footer>
             </div>
-            <Outlet />
         </div>
     );
 }
