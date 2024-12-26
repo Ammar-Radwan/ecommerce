@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/electronics-ecommerce/static/css/main.e15c629f.css",
-    "main.js": "/electronics-ecommerce/static/js/main.35d4df0e.js",
-    "static/js/787.3e334911.chunk.js": "/electronics-ecommerce/static/js/787.3e334911.chunk.js",
+    "main.css": "/electronics-ecommerce/static/css/main.8a2355d4.css",
+    "main.js": "/electronics-ecommerce/static/js/main.44ff8be5.js",
+    "static/js/453.f26dc1c2.chunk.js": "/electronics-ecommerce/static/js/453.f26dc1c2.chunk.js",
     "index.html": "/electronics-ecommerce/index.html",
-    "main.e15c629f.css.map": "/electronics-ecommerce/static/css/main.e15c629f.css.map",
-    "main.35d4df0e.js.map": "/electronics-ecommerce/static/js/main.35d4df0e.js.map",
-    "787.3e334911.chunk.js.map": "/electronics-ecommerce/static/js/787.3e334911.chunk.js.map"
+    "main.8a2355d4.css.map": "/electronics-ecommerce/static/css/main.8a2355d4.css.map",
+    "main.44ff8be5.js.map": "/electronics-ecommerce/static/js/main.44ff8be5.js.map",
+    "453.f26dc1c2.chunk.js.map": "/electronics-ecommerce/static/js/453.f26dc1c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e15c629f.css",
-    "static/js/main.35d4df0e.js"
+    "static/css/main.8a2355d4.css",
+    "static/js/main.44ff8be5.js"
   ]
 }
