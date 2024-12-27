@@ -12,10 +12,6 @@ import NotFound from '../pages/NotFound'
 
 const MainRouter = createBrowserRouter([
   {
-    path: "/",
-    element: <Navigate to="/electronics-ecommerce/home" replace/>
-  },
-  {
     path: "/electronics-ecommerce",
     children: [
       {
@@ -48,15 +44,10 @@ const MainRouter = createBrowserRouter([
       }
     ]
   },
-  // Not Found
-  {
-    path: "/404",
-    element: <NotFound />
-  },
   {
     path: "*",
     element: <NotFound />
-  },
+  }
 ]);
 
 export default MainRouter;
