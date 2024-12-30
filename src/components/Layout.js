@@ -39,14 +39,6 @@ function Layout({ children }){
                             to={isSignedUp ? `${ROOT}/products`: `${ROOT}/must-sign-up`}>
                             Products</Link>
                         </li>
-                        <li key='registration' className='nav-item'>
-                            <Link className='nav-link main-color-hover' onClick={handleLink}
-                            to={`${ROOT}/registration`}>Registration</Link>
-                        </li>
-                        <li key='login' className='nav-item'>
-                            <Link className='nav-link main-color-hover' onClick={handleLink}
-                            to={`${ROOT}/login`}>Login</Link>
-                        </li>
                         <li className='nav-item'>
                             <Link className="nav-link main-color-hover" onClick={handleLink} 
                             to={isSignedUp ? `${ROOT}/cart`: `${ROOT}/must-sign-up`}>
@@ -56,6 +48,14 @@ function Layout({ children }){
                                     <span className="notifications">{cartCount}</span>: ''
                                 }
                             </Link>
+                        </li>
+                        <li key='registration' className='nav-item'>
+                            <Link className='nav-link main-color-hover' onClick={handleLink}
+                            to={`${ROOT}/registration`}>Registration</Link>
+                        </li>
+                        <li key='login' className='nav-item'>
+                            <Link className='nav-link main-color-hover' onClick={handleLink}
+                            to={`${ROOT}/login`}>Login</Link>
                         </li>
                     </ul>
                     </div>

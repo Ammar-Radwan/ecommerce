@@ -6,7 +6,9 @@ import '../css/About.css'
 const About = () => {
     return(
         <Layout>
-            <div className="d-flex flex-column min-vh-100 pt-5">
+            <div
+              className="d-flex flex-column justify-content-center align-items-center py-5"
+            >
                 <div className='container'>
                     <h1>ABOUT US</h1>
 

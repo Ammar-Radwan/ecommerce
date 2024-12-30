@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
+import { MainContext } from '../contexts/MainContext';
 import { Link } from 'react-router-dom';
 import "../css/Registration.css";
-import { MainContext } from '../contexts/MainContext';
 
 const Login = () => {
   
@@ -12,7 +12,7 @@ const Login = () => {
   }
 
   return (
-    <section className="form login">
+    <section className="box">
       <div className="container">
           <div className="row justify-content-center">
               <h2 className="text-center my-5" >

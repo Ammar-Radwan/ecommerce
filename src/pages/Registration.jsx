@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
+import { MainContext } from '../contexts/MainContext';
 import { Link } from 'react-router-dom';
 import '../css/Registration.css'
-import { MainContext } from '../contexts/MainContext';
 
 
 function Registration(){
@@ -13,7 +13,7 @@ function Registration(){
     }
 
     return(
-        <section className="registration">
+        <section className="box">
             <div className="container">
                 <div className="row justify-content-center">
                     <h2 className="text-center my-5">
