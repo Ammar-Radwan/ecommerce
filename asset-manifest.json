@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/electronics-ecommerce/static/css/main.8a2355d4.css",
-    "main.js": "/electronics-ecommerce/static/js/main.23c7b927.js",
+    "main.css": "/electronics-ecommerce/static/css/main.5f35dc33.css",
+    "main.js": "/electronics-ecommerce/static/js/main.b803372e.js",
     "static/media/mobile_04.png": "/electronics-ecommerce/static/media/mobile_04.06001945103447631ae0.png",
     "static/media/laptop_01.png": "/electronics-ecommerce/static/media/laptop_01.f7e8392ebdca838400d4.png",
     "static/media/mobile_02.png": "/electronics-ecommerce/static/media/mobile_02.b4512c4c7d153aba4d1c.png",
@@ -30,11 +30,11 @@
     "static/media/headphone_03.png": "/electronics-ecommerce/static/media/headphone_03.77429889ce840835ecfe.png",
     "static/media/brand_05.png": "/electronics-ecommerce/static/media/brand_05.379ea6dd3cb8bcc8ce02.png",
     "index.html": "/electronics-ecommerce/index.html",
-    "main.8a2355d4.css.map": "/electronics-ecommerce/static/css/main.8a2355d4.css.map",
-    "main.23c7b927.js.map": "/electronics-ecommerce/static/js/main.23c7b927.js.map"
+    "main.5f35dc33.css.map": "/electronics-ecommerce/static/css/main.5f35dc33.css.map",
+    "main.b803372e.js.map": "/electronics-ecommerce/static/js/main.b803372e.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a2355d4.css",
-    "static/js/main.23c7b927.js"
+    "static/css/main.5f35dc33.css",
+    "static/js/main.b803372e.js"
   ]
 }
