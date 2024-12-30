@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout'
 import Carousel from '../components/home/Carousel';
-import * as homeImgs from '../assets/homePage/index'
+import * as homeImgs from '../assets/homePage/index';
 import '../css/Home.css'
 
 const Home = () => {

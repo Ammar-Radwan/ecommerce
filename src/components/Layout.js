@@ -64,8 +64,8 @@ function Layout({ children }){
                     { children }
                 </main>
                 <footer>
-                    <div className="footer w-100 mt-5 py-3 text-center">
-                        Copyright (c) 2023 Ammar Radwan, All Rights Reserveds.
+                    <div className="footer rounded w-100 my-3 py-3 text-center">
+                        Copyright &copy; 2023 Ammar Radwan, All Rights Reserveds.
                     </div>
                 </footer>
             </div>

@@ -12,6 +12,10 @@ import NotFound from '../pages/NotFound'
 
 const MainRouter = createBrowserRouter([
   {
+    path: '/electronics-ecommerce',
+    element: <Navigate to={'/electronics-ecommerce/home'} />
+  },
+  {
     path: "/electronics-ecommerce",
     children: [
       {
@@ -41,6 +45,10 @@ const MainRouter = createBrowserRouter([
       {
         path: "cart",
         element: <Cart />
+      },
+      {
+        path: "404",
+        element: <NotFound />
       }
     ]
   },
