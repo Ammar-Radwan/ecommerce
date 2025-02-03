@@ -36,7 +36,7 @@ const Login = () => {
                       </div>
                   </div>
                   <div className="form-group mt-3">
-                    <Link to='/electronics-ecommerce/home' onClick={handleSignIn}
+                    <Link to='/ecommerce/home' onClick={handleSignIn}
                     className="btn btn-primary text-light mt-3">
                         Log In
                     </Link>

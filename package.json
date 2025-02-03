@@ -1,6 +1,6 @@
 {
-  "homepage": "https://ammar-radwan.github.io/electronics-ecommerce",
-  "name": "electronics-ecommerce",
+  "homepage": "https://ammar-radwan.github.io/ecommerce",
+  "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

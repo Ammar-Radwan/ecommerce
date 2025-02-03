@@ -56,7 +56,7 @@ function Registration(){
                                 </label>
                             </div>
                         </div>
-                        <Link to='/electronics-ecommerce/home' onClick={handleSignUp}
+                        <Link to='/ecommerce/home' onClick={handleSignUp}
                         className="btn btn-primary text-light mt-3">
                             Sign Up
                         </Link>

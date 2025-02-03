@@ -10,13 +10,15 @@ import Login from '../pages/Login'
 import Cart from '../pages/Cart'
 import NotFound from '../pages/NotFound'
 
+const ROOT = '/ecommerce';
+
 const MainRouter = createBrowserRouter([
   {
-    path: '/electronics-ecommerce',
-    element: <Navigate to={'/electronics-ecommerce/home'} />
+    path: `${ROOT}`,
+    element: <Navigate to={`${ROOT}/home`} />
   },
   {
-    path: "/electronics-ecommerce",
+    path: `${ROOT}`,
     children: [
       {
         path: "home",

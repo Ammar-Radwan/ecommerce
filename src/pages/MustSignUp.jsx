@@ -12,7 +12,7 @@ const MustSignUp = () => {
                             <h5 style={{marginTop: '200px'}}>
                                 You must sign up before accessing products or cart page
                             </h5>
-                            <Link to='/electronics-ecommerce/registration'
+                            <Link to='/ecommerce/registration'
                             className="btn btn-primary text-light mt-3">
                                 Go To Sign Up Page
                             </Link>

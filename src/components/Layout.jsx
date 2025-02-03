@@ -5,7 +5,7 @@ import '../css/Layout.css'
 
 function Layout({ children }){
     const { isSignedUp, cartCount } = useContext(MainContext)
-    const ROOT = '/electronics-ecommerce'
+    const ROOT = '/ecommerce'
 
     return(
         <div className="layout">
